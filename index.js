@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const cloudinary = require("cloudinary").v2;
 const bodyParser = require("body-parser");
+const cors = require("cors");
 const { getCachedPublicId, setCachedPublicId } = require("./redis");
 
 cloudinary.config({
@@ -15,6 +16,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
+app.use(cors());
 
 app.post("/remove-bg", async (req, res) => {
   try {
