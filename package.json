@@ -1,0 +1,18 @@
+{
+  "name": "cloudinary-proxy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/zdhickman/cloudinary-proxy.git",
+  "author": "zdhickman <zdhickman@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cloudinary": "^1.34.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "ioredis": "^5.3.1"
+  },
+  "scripts": {
+    "dev": "node index.js"
+  }
+}
