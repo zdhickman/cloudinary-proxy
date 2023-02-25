@@ -32,7 +32,7 @@ app.post("/remove-bg", async (req, res) => {
       });
       await setCachedPublicId(url, res.public_id);
     }
-    const result = cloudinary.url(publicId, {
+    const result = cloudinary.url(`${publicId}.png`, {
       effect: `make_transparent:${tolerance}`,
     });
     res.send(result);
