@@ -31,10 +31,10 @@ Use the `make_transparent` effect to remove the background of an image.
 ## Installation
 
 ```
-yarn instal
+yarn install
 ```
 
-## Env
+## Env Setup
 
 Create a .env file with these values:
 
@@ -64,6 +64,10 @@ SECRET=""
 
 ```
 yarn dev
-   ...or...
+
+...
+or
+...
+
 yarn start
 ```
