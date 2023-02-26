@@ -13,8 +13,6 @@ cloudinary.config({
 
 const app = express();
 
-const PORT = process.env.PORT || 3000;
-
 app.use(bodyParser.json());
 app.use(cors());
 
@@ -35,13 +33,14 @@ app.post("/remove-bg", async (req, res) => {
     const result = cloudinary.url(`${publicId}.png`, {
       effect: `make_transparent:${tolerance}`,
     });
-    res.send(result);
+    return res.status(200).send(result);
   } catch (e) {
-    console.log(e);
-    res.sendStatus(500);
+    console.error(e);
+    return res.sendStatus(500);
   }
 });
 
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Listening on port ${port}...`);
 });
