@@ -43,5 +43,5 @@ app.post("/remove-bg", async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log("Listen on the port 3000...");
+  console.log(`Listening on port ${port}...`);
 });
